@@ -1,0 +1,20 @@
+image: node:16.14
+
+stages:
+  - semantic-release
+
+version-job:
+  stage: semantic-release
+  variables:
+    # Used by the semantic versioning git plugin
+    GIT_AUTHOR_NAME: "Treeview bot"
+    GIT_AUTHOR_EMAIL: "team@treeview.com"
+    GIT_COMMITTER_NAME: "Treeview bot"
+    GIT_COMMITTER_EMAIL: "team@treeview.com"
+  rules:
+    # todo: update to a more complex rule and execute when merge request to main is merged
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script:
+    # semver
+    - npx -p @semantic-release/changelog -p @semantic-release/exec -p @semantic-release/git -p @semantic-release/gitlab
+      -p semantic-release semantic-release
