@@ -1,7 +1,7 @@
 {
   "name": "studio.treeview.packagename",
   "version": "0.0.1",
-  "displayName": "",
+  "displayName": "TVPackageName",
   "description": "",
   "unity": "2020.3",
   "keywords": [
@@ -14,13 +14,19 @@
   "private": true,
   "files": [
     "Editor/*",
+    "Editor.meta",
     "Runtime/*",
+    "Runtime.meta",
     "Documentation~/*",
     "Samples~/*",
     "README.md",
+    "README.md.meta",
     "CHANGELOG.md",
-    "packages.json"
+    "CHANGELOG.md.meta",
+    "packages.json",
+    "packages.json.meta"
   ],
+  "samples": [],
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",

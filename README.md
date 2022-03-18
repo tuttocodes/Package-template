@@ -17,9 +17,6 @@ public class AwesomeCodeSample
 }
 ```
 
-## INSTALLATION
-Installation instructions.
-
 ### DEPENDENCIES
 - Dependency 1
 - Dependency 2
